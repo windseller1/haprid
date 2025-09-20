@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نشر منصة الكربون الهجينة</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #22c55e, #3b82f6);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #1f2937;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+        
+        .subtitle {
+            color: #6b7280;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .steps {
+            text-align: right;
+            margin: 30px 0;
+        }
+        
+        .step {
+            background: #f9fafb;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .step:hover {
+            border-color: #22c55e;
+            transform: translateY(-2px);
+        }
+        
+        .step-number {
+            background: #22c55e;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+        
+        .step-title {
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+        
+        .step-description {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        .btn {
+            background: #22c55e;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            background: #16a34a;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: #6b7280;
+        }
+        
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .feature {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .feature-title {
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 5px;
+        }
+        
+        .feature-desc {
+            color: #6b7280;
+            font-size: 0.8rem;
+        }
+        
+        .warning {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #92400e;
+        }
+        
+        .success {
+            background: #d1fae5;
+            border: 1px solid #10b981;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #065f46;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🌱</div>
+        <h1>منصة الكربون الهجينة</h1>
+        <p class="subtitle">نشر سريع وسهل على Vercel</p>
+        
+        <div class="steps">
+            <div class="step">
+                <span class="step-number">1</span>
+                <div class="step-title">بناء المشروع</div>
+                <div class="step-description">تثبيت التبعيات وبناء الملفات</div>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">2</span>
+                <div class="step-title">رفع على Vercel</div>
+                <div class="step-description">اختر الطريقة المناسبة لك</div>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">3</span>
+                <div class="step-title">اختبار الموقع</div>
+                <div class="step-description">تأكد من عمل جميع الصفحات</div>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <button class="btn" onclick="runQuickDeploy()">🚀 نشر سريع</button>
+            <a href="https://vercel.com" target="_blank" class="btn btn-secondary">🌐 Vercel</a>
+            <a href="https://github.com" target="_blank" class="btn btn-secondary">📁 GitHub</a>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🌱</div>
+                <div class="feature-title">تعويض الكربون</div>
+                <div class="feature-desc">حساب وتعويض البصمة الكربونية</div>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🪙</div>
+                <div class="feature-title">NFTs الكربون</div>
+                <div class="feature-desc">تداول الرموز غير القابلة للاستبدال</div>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🏪</div>
+                <div class="feature-title">السوق الرقمي</div>
+                <div class="feature-desc">منصة تداول متقدمة</div>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🔒</div>
+                <div class="feature-title">أمان متقدم</div>
+                <div class="feature-desc">تقنية البلوك تشين</div>
+            </div>
+        </div>
+        
+        <div class="warning">
+            <strong>⚠️ تنبيه:</strong> تأكد من تثبيت Node.js قبل البدء
+        </div>
+        
+        <div class="success">
+            <strong>✅ جاهز للنشر:</strong> جميع الملفات المطلوبة موجودة
+        </div>
+        
+        <div style="margin-top: 30px; color: #6b7280; font-size: 0.9rem;">
+            <p>📞 للمساعدة: راجع ملف <code>deploy-instructions.md</code></p>
+        </div>
+    </div>
+    
+    <script>
+        function runQuickDeploy() {
+            // محاولة تشغيل ملف deploy.bat
+            if (confirm('هل تريد تشغيل النشر السريع؟\n\nسيتم فتح Terminal وتشغيل الأوامر المطلوبة.')) {
+                // في بيئة Windows
+                if (navigator.platform.indexOf('Win') !== -1) {
+                    // محاولة تشغيل ملف .bat
+                    const link = document.createElement('a');
+                    link.href = 'quick-deploy.bat';
+                    link.download = 'quick-deploy.bat';
+                    link.click();
+                    
+                    alert('تم تحميل ملف النشر السريع.\n\n1. انقر مرتين على الملف\n2. اتبع التعليمات على الشاشة');
+                } else {
+                    // في بيئات أخرى
+                    alert('في بيئة غير Windows:\n\n1. افتح Terminal\n2. شغل: npm install\n3. شغل: node fix-dependencies.js\n4. شغل: npm run build\n5. ارفع مجلد dist إلى Vercel');
+                }
+            }
+        }
+        
+        // إضافة تأثيرات تفاعلية
+        document.querySelectorAll('.step').forEach(step => {
+            step.addEventListener('click', function() {
+                this.style.transform = 'scale(1.02)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 200);
+            });
+        });
+        
+        // إضافة تأثير للزر الرئيسي
+        document.querySelector('.btn').addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px) scale(1.05)';
+        });
+        
+        document.querySelector('.btn').addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    </script>
+</body>
+</html>
