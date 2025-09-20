@@ -43,4 +43,3 @@ const LanguageSwitcher = ({ currentLanguage, onLanguageChange }) => {
 }
 
 export default LanguageSwitcher
-

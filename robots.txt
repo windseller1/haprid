@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://carbon-platform.vercel.app/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_vercel/
+
+# Allow important pages
+Allow: /
+Allow: /marketplace
+Allow: /login
+Allow: /register
+Allow: /dashboard
+Allow: /profile
+Allow: /wallet

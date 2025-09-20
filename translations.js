@@ -291,4 +291,3 @@ export const translations = {
 export const getTranslation = (language, key) => {
   return translations[language]?.[key] || translations['ar'][key] || key
 }
-
